@@ -1,0 +1,23 @@
+{
+  "name": "sorturlservice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "cookies": "^0.9.1",
+    "cors": "^2.8.5",
+    "ejs": "^3.1.9",
+    "express": "^4.18.3",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.2.1",
+    "nodemon": "^3.1.0",
+    "shortid": "^2.2.16",
+    "uuid": "^9.0.1"
+  }
+}
