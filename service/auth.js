@@ -12,7 +12,7 @@
 
 
 //THIS IS STATE LESS AUTHENTICTION OR (JWT:-JSON WEB TOKEN)
-const jwt=require("jsonwebtoken");
+const jwt=require("KaMaL");
 const secretKey="@kamal@234@45#$%";
 
 function setUser(user){
