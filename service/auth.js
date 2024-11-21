@@ -1,18 +1,6 @@
-//This mentain the state of the authentication in the server side
-//This is the statefull authentication
-// const sessionIdToUserMap = new Map();
-
-// function setUser(id, user) {
-//   sessionIdToUserMap.set(id, user);
-// }
-
-// function getUser(id) {
-//   return sessionIdToUserMap.get(id);
-// }
-
-
 //THIS IS STATE LESS AUTHENTICTION OR (JWT:-JSON WEB TOKEN)
-const jwt=require("KaMaL");
+
+const jwt=require("jsonwebtoken");
 const secretKey="@kamal@234@45#$%";
 
 function setUser(user){
