@@ -30,11 +30,6 @@ app.use(cookieParser());
 app.use(checkForauthentication);
 
 
-// // ROUTER
-// app.use("/url", restrictTOLoggedinUserOnly, urlRoute);
-// app.use("/user", userRoute);
-// app.use("/", checkAuth, staticRoute);
-
 //This is added after refectoring the token auth2 code
 app.use("/url", restrictTo(["NORMAL","ADMIN"]), urlRoute);
 app.use("/user", userRoute);
@@ -42,6 +37,3 @@ app.use("/", staticRoute);
 
 
 app.listen(PORT, () => console.log(`Server started at PORT:${PORT}`));
-
-
-// lecture 26 time 13 minute

@@ -1,5 +1,4 @@
 //This middleware handle the Cookies based Authentication
-//After refactore the code remove the repition
 const { getUser } = require("../service/auth");
 
 function checkForauthentication(req, res, next) {
@@ -13,7 +12,7 @@ function checkForauthentication(req, res, next) {
   return next();
 }
 
-//Function for the admine and other role
+//Function for the admin and other role
 function restrictTo(roles = []) {
   return function (req, res, next) {
     if (!req.user) return res.redirect("/login");
@@ -28,30 +27,3 @@ module.exports = {
   restrictTo,
 };
 
-
-
-//Before refctoring the code
-// const { getUser } = require("../service/auth");
-
-// async function restrictTOLoggedinUserOnly(req, res, next) {
-//   const userUid = req.cookies?.token;
-
-//   if (!userUid) return res.redirect("/login");
-//   const user = getUser(userUid);
-//   if (!user) return res.redirect("/login");
-
-//   req.user = user;
-//   next();
-// }
-
-// async function checkAuth(req, res, next) {
-//   const userUid = req.cookies?.uid
-//   const user = getUser(userUid);
-
-//   req.user = user;
-//   next();
-// }
-// module.exports = {
-//   restrictTOLoggedinUserOnly,
-//   checkAuth,
-// };

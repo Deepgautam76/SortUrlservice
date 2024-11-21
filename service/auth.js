@@ -1,5 +1,4 @@
 //THIS IS STATE LESS AUTHENTICTION OR (JWT:-JSON WEB TOKEN)
-
 const jwt=require("jsonwebtoken");
 const secretKey="@kamal@234@45#$%";
 
@@ -20,7 +19,6 @@ function getUser(token){
      return null;
   }
 }
-
 
 
 module.exports = {
